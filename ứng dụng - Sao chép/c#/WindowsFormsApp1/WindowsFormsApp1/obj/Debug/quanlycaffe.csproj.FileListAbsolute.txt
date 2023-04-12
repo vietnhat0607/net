@@ -1,0 +1,13 @@
+C:\Users\HP\Desktop\ứng dụng\c#\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\HP\Desktop\ứng dụng\c#\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\HP\Desktop\ứng dụng\c#\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\HP\Desktop\ứng dụng\c#\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\quanlycaffe.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\ứng dụng\c#\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\quanlycaffe.csproj.SuggestedBindingRedirects.cache
+C:\Users\HP\Desktop\ứng dụng\c#\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.dangnhap.resources
+C:\Users\HP\Desktop\ứng dụng\c#\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\HP\Desktop\ứng dụng\c#\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\quanlycaffe.csproj.GenerateResource.cache
+C:\Users\HP\Desktop\ứng dụng\c#\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\quanlycaffe.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\ứng dụng\c#\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\HP\Desktop\ứng dụng\c#\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\HP\Desktop\ứng dụng\c#\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.quanly.resources
+C:\Users\HP\Desktop\ứng dụng\c#\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.tablefood.resources
