@@ -55,9 +55,25 @@
             this.btnaddnew = new System.Windows.Forms.Button();
             this.tpdoanhthu = new System.Windows.Forms.TabPage();
             this.tptaikhoan = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btndeletes = new System.Windows.Forms.Button();
+            this.btnexits = new System.Windows.Forms.Button();
+            this.btnsaves = new System.Windows.Forms.Button();
+            this.btnsua = new System.Windows.Forms.Button();
+            this.btnadd = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtemail = new System.Windows.Forms.TextBox();
+            this.txtpass = new System.Windows.Forms.TextBox();
+            this.txtusername = new System.Windows.Forms.TextBox();
+            this.txtfullname = new System.Windows.Forms.TextBox();
+            this.txtids = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvuser = new System.Windows.Forms.DataGridView();
             this.tcadmin.SuspendLayout();
             this.tpdoanhmuc.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -67,6 +83,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvdisplay)).BeginInit();
             this.panel4.SuspendLayout();
             this.tptaikhoan.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvuser)).BeginInit();
             this.SuspendLayout();
             // 
             // tcadmin
@@ -143,6 +163,7 @@
             this.tpmon.TabIndex = 1;
             this.tpmon.Text = "món ăn ";
             this.tpmon.UseVisualStyleBackColor = true;
+            this.tpmon.Click += new System.EventHandler(this.tpmon_Click);
             // 
             // panel6
             // 
@@ -242,6 +263,7 @@
             this.dgvdisplay.RowTemplate.Height = 24;
             this.dgvdisplay.Size = new System.Drawing.Size(539, 335);
             this.dgvdisplay.TabIndex = 0;
+            this.dgvdisplay.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdisplay_CellContentClick);
             this.dgvdisplay.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdisplay_CellEnter);
             // 
             // panel4
@@ -322,8 +344,8 @@
             // 
             // tptaikhoan
             // 
-            this.tptaikhoan.Controls.Add(this.panel2);
             this.tptaikhoan.Controls.Add(this.panel3);
+            this.tptaikhoan.Controls.Add(this.panel2);
             this.tptaikhoan.Controls.Add(this.panel1);
             this.tptaikhoan.Location = new System.Drawing.Point(4, 25);
             this.tptaikhoan.Name = "tptaikhoan";
@@ -332,27 +354,189 @@
             this.tptaikhoan.TabIndex = 3;
             this.tptaikhoan.Text = "tài khoản ";
             this.tptaikhoan.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(9, 6);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(536, 44);
-            this.panel2.TabIndex = 0;
+            this.tptaikhoan.Click += new System.EventHandler(this.tptaikhoan_Click);
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(582, 56);
+            this.panel3.Controls.Add(this.btndeletes);
+            this.panel3.Controls.Add(this.btnexits);
+            this.panel3.Controls.Add(this.btnsaves);
+            this.panel3.Controls.Add(this.btnsua);
+            this.panel3.Controls.Add(this.btnadd);
+            this.panel3.Location = new System.Drawing.Point(506, 6);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 335);
+            this.panel3.Size = new System.Drawing.Size(265, 179);
             this.panel3.TabIndex = 0;
+            // 
+            // btndeletes
+            // 
+            this.btndeletes.Location = new System.Drawing.Point(26, 130);
+            this.btndeletes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btndeletes.Name = "btndeletes";
+            this.btndeletes.Size = new System.Drawing.Size(75, 32);
+            this.btndeletes.TabIndex = 6;
+            this.btndeletes.Text = "delete";
+            this.btndeletes.UseVisualStyleBackColor = true;
+            this.btndeletes.Click += new System.EventHandler(this.btndeletes_Click);
+            // 
+            // btnexits
+            // 
+            this.btnexits.Location = new System.Drawing.Point(26, 71);
+            this.btnexits.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnexits.Name = "btnexits";
+            this.btnexits.Size = new System.Drawing.Size(75, 32);
+            this.btnexits.TabIndex = 5;
+            this.btnexits.Text = "exit ";
+            this.btnexits.UseVisualStyleBackColor = true;
+            this.btnexits.Click += new System.EventHandler(this.btnexits_Click);
+            // 
+            // btnsaves
+            // 
+            this.btnsaves.Location = new System.Drawing.Point(167, 71);
+            this.btnsaves.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnsaves.Name = "btnsaves";
+            this.btnsaves.Size = new System.Drawing.Size(71, 32);
+            this.btnsaves.TabIndex = 4;
+            this.btnsaves.Text = "save";
+            this.btnsaves.UseVisualStyleBackColor = true;
+            this.btnsaves.Click += new System.EventHandler(this.btnsaves_Click);
+            // 
+            // btnsua
+            // 
+            this.btnsua.Location = new System.Drawing.Point(167, 13);
+            this.btnsua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnsua.Name = "btnsua";
+            this.btnsua.Size = new System.Drawing.Size(75, 32);
+            this.btnsua.TabIndex = 3;
+            this.btnsua.Text = "Sửa";
+            this.btnsua.UseVisualStyleBackColor = true;
+            this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
+            // 
+            // btnadd
+            // 
+            this.btnadd.Location = new System.Drawing.Point(26, 13);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.Size = new System.Drawing.Size(68, 32);
+            this.btnadd.TabIndex = 2;
+            this.btnadd.Text = "Thêm";
+            this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.txtemail);
+            this.panel2.Controls.Add(this.txtpass);
+            this.panel2.Controls.Add(this.txtusername);
+            this.panel2.Controls.Add(this.txtfullname);
+            this.panel2.Controls.Add(this.txtids);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Location = new System.Drawing.Point(6, 6);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(494, 179);
+            this.panel2.TabIndex = 0;
+            // 
+            // txtemail
+            // 
+            this.txtemail.Location = new System.Drawing.Point(104, 140);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(319, 22);
+            this.txtemail.TabIndex = 9;
+            // 
+            // txtpass
+            // 
+            this.txtpass.Location = new System.Drawing.Point(104, 107);
+            this.txtpass.Name = "txtpass";
+            this.txtpass.Size = new System.Drawing.Size(319, 22);
+            this.txtpass.TabIndex = 8;
+            // 
+            // txtusername
+            // 
+            this.txtusername.Location = new System.Drawing.Point(104, 76);
+            this.txtusername.Name = "txtusername";
+            this.txtusername.Size = new System.Drawing.Size(319, 22);
+            this.txtusername.TabIndex = 7;
+            // 
+            // txtfullname
+            // 
+            this.txtfullname.Location = new System.Drawing.Point(104, 40);
+            this.txtfullname.Name = "txtfullname";
+            this.txtfullname.Size = new System.Drawing.Size(319, 22);
+            this.txtfullname.TabIndex = 6;
+            // 
+            // txtids
+            // 
+            this.txtids.Location = new System.Drawing.Point(104, 7);
+            this.txtids.Name = "txtids";
+            this.txtids.Size = new System.Drawing.Size(319, 22);
+            this.txtids.TabIndex = 5;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(12, 146);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(41, 16);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Email";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(11, 113);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 16);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Passwords";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 82);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(73, 16);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "UserName";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 46);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 16);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "fullname";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 13);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(18, 16);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "id";
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(6, 56);
+            this.panel1.Controls.Add(this.dgvuser);
+            this.panel1.Location = new System.Drawing.Point(6, 191);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(539, 335);
+            this.panel1.Size = new System.Drawing.Size(765, 200);
             this.panel1.TabIndex = 0;
+            // 
+            // dgvuser
+            // 
+            this.dgvuser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvuser.Location = new System.Drawing.Point(0, 0);
+            this.dgvuser.Name = "dgvuser";
+            this.dgvuser.RowHeadersWidth = 51;
+            this.dgvuser.RowTemplate.Height = 24;
+            this.dgvuser.Size = new System.Drawing.Size(765, 197);
+            this.dgvuser.TabIndex = 0;
             // 
             // quanly
             // 
@@ -376,6 +560,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvdisplay)).EndInit();
             this.panel4.ResumeLayout(false);
             this.tptaikhoan.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvuser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -394,9 +583,6 @@
         private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnaddnew;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnexit;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem mónĂnToolStripMenuItem;
@@ -412,5 +598,24 @@
         private System.Windows.Forms.ToolStripMenuItem nướcÉpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sinhTốToolStripMenuItem;
         private System.Windows.Forms.Button btndelete;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtemail;
+        private System.Windows.Forms.TextBox txtpass;
+        private System.Windows.Forms.TextBox txtusername;
+        private System.Windows.Forms.TextBox txtfullname;
+        private System.Windows.Forms.TextBox txtids;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dgvuser;
+        private System.Windows.Forms.Button btndeletes;
+        private System.Windows.Forms.Button btnexits;
+        private System.Windows.Forms.Button btnsaves;
+        private System.Windows.Forms.Button btnsua;
+        private System.Windows.Forms.Button btnadd;
     }
 }

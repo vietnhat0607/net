@@ -42,7 +42,7 @@ namespace WindowsFormsApp1
                 con.Open();
                 string tk = txtdangnhap.Text;
                 string mk = txtpass.Text;
-                string sql = "select * from dangnhap where taikhoan='" + tk + "' and mkhau='" + mk + "'";
+                string sql = "select UserName,Passwords from account where UserName='" + tk + "' and Passwords='" + mk + "'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 SqlDataReader dta = cmd.ExecuteReader();
                 if (dta.Read() == true)
