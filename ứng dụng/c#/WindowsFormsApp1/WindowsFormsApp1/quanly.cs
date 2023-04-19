@@ -43,6 +43,8 @@ namespace WindowsFormsApp1
                 btnsaves.Enabled = check;
                 btndeletes.Enabled = !check;
                 dgvuser.Enabled = !check;
+
+          
         }
         private void laydulieu ()
         {
@@ -51,11 +53,15 @@ namespace WindowsFormsApp1
             dgvdisplay.DataSource = db.getData(sql);
             setenable(false );
         }
+       
         private void quanly_Load(object sender, EventArgs e)
         {
             laydulieu();
             load();
+           
         }
+       
+
 
         private void btnexit_Click(object sender, EventArgs e)
         {
@@ -291,5 +297,11 @@ namespace WindowsFormsApp1
             db.runQuery(sql);
             load();
         }
+    
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        
     }
 }

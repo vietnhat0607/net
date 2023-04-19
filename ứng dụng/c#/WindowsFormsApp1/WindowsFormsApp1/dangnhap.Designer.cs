@@ -36,17 +36,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btndangnhap = new System.Windows.Forms.Button();
             this.btnexit = new System.Windows.Forms.Button();
+            this.ptb1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.txtdangnhap);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(72, 44);
+            this.panel1.Location = new System.Drawing.Point(12, 44);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(579, 85);
+            this.panel1.Size = new System.Drawing.Size(446, 85);
             this.panel1.TabIndex = 0;
             // 
             // txtdangnhap
@@ -70,9 +72,9 @@
             // 
             this.panel2.Controls.Add(this.txtpass);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(72, 135);
+            this.panel2.Location = new System.Drawing.Point(12, 135);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(579, 85);
+            this.panel2.Size = new System.Drawing.Size(446, 85);
             this.panel2.TabIndex = 1;
             // 
             // txtpass
@@ -112,21 +114,34 @@
             this.btnexit.UseVisualStyleBackColor = true;
             this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
             // 
+            // ptb1
+            // 
+            this.ptb1.Image = global::WindowsFormsApp1.Properties.Resources.pngtree_user_id_login_image_png_image_1648074;
+            this.ptb1.Location = new System.Drawing.Point(529, 97);
+            this.ptb1.Name = "ptb1";
+            this.ptb1.Size = new System.Drawing.Size(198, 156);
+            this.ptb1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptb1.TabIndex = 4;
+            this.ptb1.TabStop = false;
+            // 
             // dangnhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ptb1);
             this.Controls.Add(this.btnexit);
             this.Controls.Add(this.btndangnhap);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "dangnhap";
             this.Text = "login";
+            this.Load += new System.EventHandler(this.dangnhap_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -141,6 +156,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btndangnhap;
         private System.Windows.Forms.Button btnexit;
+        private System.Windows.Forms.PictureBox ptb1;
     }
 }
 

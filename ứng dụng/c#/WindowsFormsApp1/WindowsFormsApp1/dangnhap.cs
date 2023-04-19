@@ -65,5 +65,10 @@ namespace WindowsFormsApp1
                 MessageBox.Show("lỗi kết nối ");
                     }
         }
+
+        private void dangnhap_Load(object sender, EventArgs e)
+        {
+         
+        }
     }
 }
